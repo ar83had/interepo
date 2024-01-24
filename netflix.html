@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;</title>
+         <meta charset="UTF-8">
+         <meta name="author" content="arshad">
+         <meta name="viewport" content="width:device-width" initial-scale="1.0">
+         <meta name="keyword" content="netflix,movie,ott,web-series">
+         <meta name="despriction" content="online movie,web-series watch platfrom">
+         <link rel="icon" type="images/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/f/ff/Netflix-new-icon.png">
+         <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            body{
+                background-color: rgb(49, 47, 47);
+                overflow-x:hidden ;
+            }
+            *:hover{
+                margin: 0px;
+                padding: 0px;
+            }
+            .main_div{
+                font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+                background-color: black;
+            }
+            .main_image{
+                height: auto;
+                width: 100%;
+                filter: blur(1px);
+                position: relative;
+                background-color: black;
+            }
+            .main_image:hover{
+                filter: blur(0px);
+            }
+            #netflix,#net,#flix{
+                color: red;
+                font-weight:900;
+                font-size:40px;
+                position: absolute;
+                top: 5vh;
+                left: 15vw;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                letter-spacing: 2px;
+            }
+            #language_button{
+                position: absolute;
+                top: 5vh;
+                right: 20vw;
+                height: 5vh;
+                width: 10vw;
+                background-color: rgba(255, 255, 255, 0);
+                color:rgb(255, 255, 255);
+                border: whitesmoke 0.5px solid;
+                border-radius: 5px;
+                font-size:medium;
+                padding-left: 5px;
+            }
+            #language_button option{
+                color: black;
+            }
+            .button{
+                background-color: red;
+                color: white;
+                border-radius: 5px;
+                border: none;
+            }
+            .button:hover{
+                background-color: rgb(196, 4, 4);
+            }
+            #sign_in{
+                position: absolute;
+                top: 5vh;
+                right: 12vw;
+                width: 5.5vw;
+                height: 5.5vh;
+            }
+            #language_button:hover{
+                border-color:red;
+                color: black;
+                background-color: rgba(255, 0, 0, 0.831);
+            }
+            .main_contant{
+                font-size:50px;
+                font-weight:bolder;
+                color: white;
+            }
+            #main1{
+                position:absolute;
+                top: 38vh;
+                left:16vw ;
+            }
+            #main2{
+                position: absolute;
+                top: 47vh;
+                left: 37vw;
+            }
+            #join{
+                color: white;
+                position: absolute;
+                top:60vh;
+                left: 40%;
+                font-size:x-large;
+                font-weight:600;
+            }
+            #ready{
+                color: white;
+                position: absolute;
+                top: 69vh;
+                left: 22%;
+                font-size: x-large;
+            }
+            #email{
+                position: absolute;
+                top: 79vh;
+                left: 24%;
+                width: 28vw;
+                height: 8vh;
+                border-radius: 5px;
+                background-color: rgba(255, 255, 255, 0);
+                color: white;
+                border:0.5px solid rgba(255, 255, 255, 0.66);
+                padding: 3px 7px 3px 8px;
+                font-size: 15px;
+            }
+            #get_started{
+                height: 9vh;
+                width: 15vw;
+                position: absolute;
+                top: 79vh;
+                left: 55%;
+                font-size:larger;
+            }
+            #get_started #get{
+                transition: 5s;
+            }
+            #get_started:hover #get{
+                position: relative;
+                top:auto;
+                left: -3%;
+            }
+            #get::after{
+               content: '\00bb';
+               font-size:larger;
+               position: relative;
+               visibility: hidden;
+               position: relative;
+            left: 1vw;
+            }
+            #get_started:hover #get::after{
+                visibility: visible;
+            }
+            .div_2{
+                box-sizing: content-box;
+                padding: 10px 5px ;
+                background-color: black;
+                height: 80vh;
+                position:relative;
+                margin-top: 1vh;
+            }
+            #div2_img{
+                position:absolute;
+                right: 10vw;
+                top: 22vh;
+            }
+            .not_div1_img{
+                margin-top: 2.5vh;
+                width: 33vw;
+                height: 39vh; 
+            }
+            #div2_main_contant{
+                position:relative;
+                left: 10vw;
+                top: 23vh;
+                font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+                color:aliceblue;
+            }
+            #div2_sub_content{
+                position: relative;
+                top: 28vh;
+                left: 10vw;
+                font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+            }
+            .div2_sub_content{
+                width: 30vw;
+                color:aliceblue;
+                font-size:x-large;
+                font-weight:500;
+            }
+            .div3_contant{
+                height: 40vh;
+                width: 33%;
+                box-sizing: border-box;
+                position: absolute;
+                top: 20vh;
+                right: 7vw;
+                line-height: 7.3vh;
+                font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+                color: aliceblue;
+            }
+            #div3_img{
+                height: 60vh;
+                width: 50vw;
+                object-fit: cover;
+                position: relative;
+                top: 7vh;
+                left: 7vw;
+            }
+            #div3_sub_contant{
+                margin-top: 8vh;
+                line-height: 4.5vh;
+                font-weight: 500;
+                color: aliceblue;
+            }
+            #div4_img{
+                position:absolute;
+                right: 10vw;
+                top: 22vh;
+                border-radius:0px 0px 30px 30px;
+            }
+            .div4_contant{
+                position: absolute;
+                top:25vh;
+                left: 10vw;
+                color: white;
+                width: 40vw;
+                font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+                color:aliceblue;
+            }
+            #div4_main{
+                font-size: 55px;
+                font-weight: 700;
+                margin-bottom: 7vh;
+            }
+            #div4_sub{
+                font-size: 26px;
+                font-weight: 500;
+                line-height: 5vh;
+            }
+            #div5_img{
+                height: 67vh;
+                width: 50vw;
+                object-fit: contain;
+                position: relative;
+                top: 7vh;
+                left: 7vw;
+            }
+            #frequency_ques{
+                color: aliceblue;
+                background-color: black;
+                margin-top: 1vh;
+                padding:15vh 0px;
+            }
+            #freq_main_contant{
+                font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+                font-size: 50px;
+                font-weight: 800;
+                text-align: center;
+                margin-bottom: 3vh;;
+            }
+            .tooltip{
+                position:relative;
+                font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+                margin:1.5vh auto;
+                width: 75%;
+            }
+            .tooltip_visible{
+                font-size:27px;
+                font-weight:500;
+                background-color:rgb(46, 46, 46);
+                padding: 3vh 2vh;
+            }
+            .tooltip_hidden{
+                background-color: rgb(53, 53, 53);
+                display: none;
+                padding: 2.5vh 1vh 3vh 2vh;
+                font-size:larger;
+                transition:10s;
+            }
+            .tooltip:hover .tooltip_hidden{
+                display: block;
+            }
+
+            .down_arrow{
+                color:silver;
+                font-size:x-large;
+                font-weight:900;
+                position: absolute;
+                top: 3vh;
+                right: 8vh;
+                transform: rotate(180deg);
+                transition: 0.3s;
+                
+            }
+            .tooltip:hover .down_arrow{
+                transform: rotate(90deg);
+            }
+
+            .ready_para{
+                color:white;
+                font-size: 22px;
+                padding-top:8vh;
+                text-align: center;
+            }
+
+            #ready_email_div{
+                position: relative;
+            }
+
+            #ready_email{
+                font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+                width: 28vw;
+                height: 8vh;
+                border-radius: 5px;
+                background-color: rgba(255, 255, 255, 0);
+                color: white;
+                border:0.5px solid rgba(255, 255, 255, 0.66);
+                padding: 3px 7px 3px 8px;
+                font-size: 15px;
+                position: absolute;
+            }
+            #ready_email_div{
+                padding: 3vh 0 0 61vh;
+                display: block;
+            }
+            #ready_button{
+                position: absolute;
+                left: 127vh;
+                background-color: red;
+                color: white;
+                border-radius: 5px;
+                border: none;
+                height: 9vh;
+                width: 15vw;
+                font-size: larger;
+            }
+
+            #ready_get::after{
+                content: '\00bb';
+               font-size:larger;
+               position: relative;
+               visibility: hidden;
+               position: relative;
+               left: 1vw;
+            }
+
+            #ready_button:hover #ready_get{
+                position: relative;
+                left: -2vh;
+            }
+
+            #ready_button:hover #ready_get::after{
+                visibility: visible;
+            }
+
+            #ready_button:hover{
+                background-color: rgba(255, 0, 0, 0.831);
+                border-color: red;
+            }
+
+            .ready{
+                padding-bottom: 10vh;
+            }
+
+            #footer_div{
+                background-color: black;
+                color: white;
+                position:relative;
+                top: -100;
+                height: max-content;
+                padding: 13vh 25vh 13vh 25vh;
+                margin-top: 1vh;
+            }
+
+            #footer_para{
+                font-size: large;
+                padding-bottom: 5vh;
+            }
+
+            .flex{
+                display: inline-flex;
+                flex-direction: column;
+            }
+            
+            .flex>p{
+                width:30vh;
+                height: 7vh;
+            }
+            #column_flex{
+                display: flex;
+                justify-content:space-between;
+                }
+            
+            .flex p a{
+                color: white;
+            }
+            .flex p a:visited{
+                color: rgb(247, 221, 186);
+            }
+            .flex p a:hover{
+                color: red;
+            }
+            .flex p a:active{
+                color: yellow;
+            }
+            #lang_footer_lang{
+                height: 5vh;
+                width: 10vw;
+                background-color: rgba(255, 255, 255, 0);
+                color:rgb(255, 255, 255);
+                border: whitesmoke 0.5px solid;
+                border-radius: 5px;
+                font-size:medium;
+                padding-left: 5px;
+            }
+            #language_button option{
+                color: black;
+            }
+         </style>
+    </head>
+    <body>
+        <img class="main_image" src="https://assets.nflxext.com/ffe/siteui/vlv3/b4c7f092-0488-48b7-854d-ca055a84fb4f/5b22968d-b94f-44ec-bea3-45dcf457f29e/IN-en-20231204-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="loading....">
+    <div class="main_div">
+        <p id="netflix">NETFLIX</p>
+        <select name="language" id="language_button">
+            <option value="english">English</option>
+            <option value="hindi">Hindi</option>
+        </select>
+        <a href="sign_in.html" target="_self" title="sing -in"><button id="sign_in" class="button">Sign In</button></a>
+        <div class="main_contant"><p id="main1">The biggest Indian hits. Ready to watch <p class="main_contant" id="main2">here from <span style="font-size: 50px;">₹149</span>.</p></p>
+        </div>
+        <p id="join">join today .cancle anytime.</p>
+        <p id="ready">Ready to watch? Enter your email to create or restart your membership.</p>
+        <input id="email" type="email" placeholder="Email address" name="email">
+        <button class="button" id="get_started" onclick="check_email()"><span id="get">Get Started</span> 
+        </button>
+    </div>
+    <div class="div_2">
+        <p id="div2_main_contant" class="main_contant">Enjoy on your TV</p>
+        <div class="div2_sub_content" id="div2_sub_content">
+            Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.
+        </div>
+        <img src="https://t3.ftcdn.net/jpg/05/54/84/12/360_F_554841272_8IGhPTbW9vXg9CS5F8YiTYQL68SaC0cg.jpg" alt="loading..." class="not_div1_img" id="div2_img">
+    </div>
+    <div class="div_2">
+        <div class="div3_contant">
+            <p id="div3_main_contant" class="main_contant">Download your shows to watch offline</p>
+            <p id="div3_sub_contant" class="div2_sub_content">Save your favourites easily and always have something to watch.</p>
+        </div>
+        <img src="https://static.vecteezy.com/system/resources/previews/011/795/475/non_2x/logo-for-film-maker-or-video-maker-design-template-free-vector.jpg" alt="" class="not_div1_img" id="div3_img">
+    </div>
+
+    <div class="div_2">
+        <img src="https://img.freepik.com/premium-photo/young-friends-having-fun-cinema-open-air_23-2149477110.jpg" alt="loading..." class="not_div1_img" id="div4_img">
+        <div class="div4_contant">
+            <p id="div4_main">Watch everywhere</p>
+            <p id="div4_sub">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+        </div>
+        </div>
+    </div>
+    <div class="div_2">
+        <img src="https://occ-0-2483-3646.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d" alt="" class="not_div1_img" id="div5_img">
+        <div class="div3_contant">
+            <p id="div3_main_contant" class="main_contant">Create profiles for kids</p>
+            <p id="div3_sub_contant" class="div2_sub_content">Send children on adventures with their favourite characters in a space made just for them—free with your membership.</p>
+        </div>
+    </div>
+
+    <div id="frequency_ques">
+        <p id="freq_main_contant">Frequently Asked Questions</p>
+        
+        <div class="tooltip" id="tooltip_1">
+            <div class="tooltip_visible" id="tooltip_1_visible">
+                What is Netflix ? <span class="down_arrow" id="down_arrow_1">&#x27A4</span> 
+            </div>
+            <div class="tooltip_hidden" id="tooltip_1_hidden">
+                <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.</p> <br>
+                <p>
+                You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!
+                </p>
+            </div>
+        </div>
+
+        <div class="tooltip" id="tooltip_1">
+            <div class="tooltip_visible" id="tooltip_1_visible">
+                How much does Netflix Cost ?<span class="down_arrow" id="down_arrow_1">&#x27A4</span> 
+            </div>
+            <div class="tooltip_hidden" id="tooltip_1_hidden">
+                <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no contracts.</p>
+            </div>
+        </div>
+
+        <div class="tooltip" id="tooltip_1">
+            <div class="tooltip_visible" id="tooltip_1_visible">
+                Where can I watch ?<span class="down_arrow" id="down_arrow_1">&#x27A4</span> 
+            </div>
+            <div class="tooltip_hidden" id="tooltip_1_hidden">
+                <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</p>
+                <p>You can also download your favourite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+            </div>
+        </div>
+
+        <div class="tooltip" id="tooltip_1">
+            <div class="tooltip_visible" id="tooltip_1_visible">
+                How do I cancle ?<span class="down_arrow" id="down_arrow_1">&#x27A4</span> 
+            </div>
+            <div class="tooltip_hidden" id="tooltip_1_hidden">
+                <p>Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+            </div>
+        </div>
+
+        <div class="tooltip" id="tooltip_1">
+            <div class="tooltip_visible" id="tooltip_1_visible">
+                What can I watch on Netflix ?<span class="down_arrow" id="down_arrow_1">&#x27A4</span> 
+            </div>
+            <div class="tooltip_hidden" id="tooltip_1_hidden">
+                <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+            </div>
+        </div>
+
+        <div class="tooltip" id="tooltip_1">
+            <div class="tooltip_visible" id="tooltip_1_visible">
+                Is Netflix Good for kids ?<span class="down_arrow" id="down_arrow_1">&#x27A4</span> 
+            </div>
+            <div class="tooltip_hidden" id="tooltip_1_hidden">
+                <p>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space</p>
+                <p>Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</p>
+            </div>
+        </div>
+
+        <div class="ready">
+            <p class="ready_para">Ready to watch? Enter your email to create or restart your membership.</p>
+            <div id="ready_email_div">
+                <input id="ready_email" type="email" placeholder="Email address" name="email">
+                <button id="ready_button"><span id="ready_get">Get Started</span></button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer_div">
+        <div id="footer_main">
+         <p id="footer_para">Questions? Call - <span style="text-decoration: underline;">000-800-919-1694</span></p>
+         <div id="column_flex">
+          <div class="flex" id="flex1">
+            <p id="item1">
+                <a href="https://help.netflix.com/support/412">FAQ</a>
+            </p>
+            
+            <p id="item2">
+                <a href="https://help.netflix.com/support/412">Investor Relations</a>
+            </p>
+            <p id="item3">
+                <a href="https://help.netflix.com/legal/privacy">privacy</a>
+            </p>
+            <p id="item4">
+                <a href="https://fast.com/">Speed Test</a>
+            </p>
+          </div>
+
+          <div class="flex" id="flex2">
+            <p id="item1">
+                <a href="https://help.netflix.com/">Help Centre</a>
+            </p>
+            
+            <p id="item2">
+                <a href="https://jobs.netflix.com/jobs">Jobs</a>
+            </p>
+            <p id="item3">
+                <a href="https://www.netflix.com/in/#">Cookie Preferences</a>
+            </p>
+            <p id="item4">
+                <a href="https://help.netflix.com/legal/notices">Legal Notices</a>
+            </p>
+          </div>
+
+          <div class="flex" id="flex3">
+            <p id="item1">
+                <a href="https://www.netflix.com/youraccount">Account</a>
+            </p>
+            
+            <p id="item2">
+                <a href="https://www.netflix.com/watch">Ways to Watch</a>
+            </p>
+            <p id="item3">
+                <a href="https://help.netflix.com/legal/corpinfo">Corporate Information</a>
+            </p>
+            <p id="item4">
+                <a href="https://www.netflix.com/in/browse/genre/839338">Only on Netflix</a>
+            </p>
+          </div>
+
+          <div class="flex" id="flex4">
+            <p id="item1">
+                <a href="https://media.netflix.com/" >Media Centre</a>
+            </p>
+            
+            <p id="item2">
+                <a href="https://help.netflix.com/legal/termsofuse">Terms of Use</a>
+            </p>
+            <p id="item3">
+                <a href="https://help.netflix.com/contactus">Contact Us</a>
+            </p>
+          </div>
+          </div>
+          <select name="language" id="lang_footer_lang">
+            <option value="english">English</option>
+            <option value="hindi">Hindi</option>
+        </select>
+        <p style="padding-top: 2vh;font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;;">Netflix india</p>
+        </div>
+    </div>
+    </body>
+    <script>
+        function check_email()
+        {
+        let email="arshadshmim786@gmail.com";
+        let in_email=document.getElementById("email").value;
+        let re=email.localeCompare(in_email);
+        if(re==0)
+        {
+            window.location.replace("https://www.hotstar.com/in/movies");
+        }
+        else
+        {
+            alert("email doest find ");
+        }
+    }
+    </script>
+</html>
