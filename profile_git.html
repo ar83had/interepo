@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile Webpage</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            body{
+
+                border-color: ghostwhite;
+                display: flex;
+            }
+            #main1{
+                width: 20%;
+                height: 100vh;
+                background-image: linear-gradient(to bottom,indigo,rgba(76, 0, 130, 0.671));
+                display: inline-flex;
+                flex-direction:column;
+                align-items: center;
+                padding-top: 5vh;
+                font-family: sans-serif;
+                color: white;
+            }
+            #main2{
+                width: 79%;
+                height: 100vh;
+                display: inline-block;
+            }
+            #profile_img{
+                width: 80%;
+                height: 40vh;
+                border-radius: 50%;
+                display: block;
+            }
+            .main1_h2{
+                display: inline-block;
+                margin-top: 2vh;
+                font-size:22px;
+            }
+            .main1_sub{
+                background-image: linear-gradient(to left,rgb(106, 0, 255),rgb(106, 0, 255,0.5));
+                width: calc(100% - 7vh);
+                height: 4vh;
+                padding-left: 7vh;
+                margin-top: 1vh;
+                font-size:small;
+                display: inline-flex;
+                align-items: center;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div id="main1">
+                <img id=profile_img src="passport size.jpg" alt="loaging">
+                <h2 class="main1_h2"> Contact Details:-</h2>
+                <div class="main1_sub">Phone no - 9310XXXXXX</div>
+                <div class="main1_sub">Email id - <span> abc123@gmail.com</span></div>
+                <div class="main1_sub">Linked In -<a href="https://www.linkedin.com/in/ar83had-shamim" style="color: yellow;"> Link</a></div>
+                <div class="main1_sub">Address - <address style="display: inline;">123,xyz,abc,New Delhi</address></div>
+        </div><div id="main2">
+        </div>
+    </body>
+</html>
